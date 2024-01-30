@@ -1,0 +1,396 @@
+/*头部*/
+body {
+  overflow-x: hidden; /*当浏览器调整的宽度小于页面宽度时，不显示横向滚动条*/
+  font-family: "microsoft yahei"; /* 设置整个页面的字体为"microsoft yahei" */
+}
+
+a {
+  font-size: 13px;
+  text-decoration: none; /* 去除链接的下划线 */
+}
+
+#header, .link {
+  height: 35px; /* 设置头部和链接的高度为35像素 */
+}
+
+#header {
+  width: 100%; /* 设置宽度为100% */
+  background-color: rgb(241, 68, 68);
+  position: fixed; /* 固定头部在屏幕顶部 */
+  z-index: 10; /* 设置头部的层级为10，确保它在其他元素上方 */
+  border-bottom: 1px solid #f5f5f5; /* 设置头部底部边框为1像素的淡灰色实线 */
+}
+
+#leftList {
+  float: left;
+  margin-left: 100px;
+}
+#rightList {
+  float: right;
+  margin-right: 100px;
+}
+
+.list > li {
+  float: left;
+  position: relative; /* 相对定位，用于后续子元素的定位 */
+}
+
+.link {
+  display: block;
+  padding: 0px 8px;
+  line-height: 35px; /* 行高与头部高度相同，垂直居中 */
+  color: white;
+}
+.link:hover {
+  color: black;
+}
+
+.hasChild:hover .link {
+  background-color: white;
+  color: black;
+}
+
+/* 显示下拉菜单 */
+.hasChild:hover .showDetail {
+  display: block; /* 切换属性，达到显示 */
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent gainsboro gainsboro gainsboro;
+}
+.showDetail {
+  position: absolute; /* 绝对定位，相对于最近的具有相对定位的父元素 */
+  top: 35px; /* 与父元素的顶部距离为35像素 */
+  left: -1px; /* 与父元素的左侧距离为-1像素，略微重叠 */
+  display: none; /* 初始状态下不显示下拉菜单 */
+  background-color: white;
+}
+
+.item {
+  color: black;
+  display: block;
+  padding-left: 5px;
+  width: 75px;
+  height: 24px;
+  line-height: 24px; /* 行高与高度相同，垂直居中 */
+}
+.item:hover {
+  background: gainsboro;
+  color: royalblue; /* 皇家蓝色 */
+}
+
+/*中间内容部分*/
+#content {
+  width: 1192px;
+  margin: 0px auto 10px auto;
+  overflow: hidden;
+  padding-top: 50px;
+}
+/****** search ********/
+#search {
+  display: flex; /* 使用弹性盒子布局 */
+  align-items: center; /* 垂直居中对齐子元素 */
+  justify-content: center; /* 水平居中对齐子元素 */
+  border-radius: 50px; /* 整体椭圆形状 */
+  border: 1px solid rgb(241, 68, 68); /* 边框样式 */
+  padding: 5px; /* 确保内容不紧贴边框 */
+  width: 500px;
+  margin: 0 auto; /* 水平居中整个容器 */
+}
+
+#select {
+  border: none; /* 移除输入框边框 */
+  outline: none; /* 移除焦点时的外框线 */
+  flex-grow: 1; /* 输入框占据剩余空间 */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#btnQuery {
+  border: none; /* 移除按钮边框 */
+  outline: none;
+  color: white;
+  background-color: rgb(241, 68, 68);
+  cursor: pointer;
+  border-radius: 20px; /* 按钮椭圆形状 */
+  padding: 10px 15px;
+}
+
+/*细节样式：每部分表现各自的样式*/
+#catalog, #menus, #carousel-container, #notice, #showGoods {
+  margin: 15px 10px 0 0;
+  overflow: hidden;
+  float: left;
+}
+/* 左侧导航栏 */
+#catalog {
+  width: 190px;
+  height: 570px;
+  border: 1px solid rgb(241, 68, 68);
+}
+
+#catalog-title {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(241, 68, 68);
+  text-indent: 10px; /* 文本缩进 */
+}
+
+#catalog ul {
+  overflow: hidden;
+}
+
+.catalog li {
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.catalog img {
+  width: 25px;
+  height: auto; /* 设置高度为 auto 以保持图片的原始比例 */
+}
+
+.linkBrand {
+  padding: 8px;
+  color: black;
+}
+
+.linkBrand:hover { /* 光标移入 */
+  color: rgb(241, 68, 68);
+  font-weight: bold; /* 加粗 */
+}
+
+.catalog li span {
+  font-family: 'STSong', 'FangSong', 'KaiTi', 'Heiti', serif;
+  font-size: 15px;
+}
+
+.gang {
+  font-family: '黑体', 'SimHei', Arial, sans-serif;
+}
+
+/* 中间导航栏 */
+#menus {
+  width: 980px;
+  height: 35px;
+  border-bottom: 2px solid rgb(241, 68, 68);
+}
+
+#menus li {
+  float: left;
+}
+
+.menu {
+  display: block;
+  padding: 0px 20px;
+  height: 35px;
+  line-height: 35px;
+  font-size: medium;
+  color: black;
+  font-weight: bold;
+}
+
+.menu:hover {
+  color: rgb(241, 68, 68);
+}
+
+/* 无缝轮播图 */
+.carousel-container, #notice, #showGoods {
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+}
+
+.carousel-container {
+  width: 660px;
+  height: 360px;
+  overflow: hidden;
+}
+.carousel-item {
+  flex: 0 0 100%;
+  height: 360px;
+  position: relative;
+}
+  
+.carousel-list {
+  width: 100%; /* 容器宽度调整为100%，确保克隆的元素可以无缝排列 */
+  height: 360px;
+  display: flex;
+  position: absolute;
+  left: 0px;
+  transition: left 1s;
+}
+
+.carousel-item {
+  flex: 0 0 660px; /* 每个项的宽度与容器宽度相同 */
+  height: 360px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.indicator {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+
+.indicator > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.indicator > span.active {
+  background-color: white;
+}
+
+.carousel-arrow {
+  width: 30px;
+  height: 45px;
+  line-height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  display: none;
+  transition: opacity 0.5s;
+}
+.carousel-arrow-left {
+  left: 0px;
+  background-image: url('../img/left.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* 或者 'contain' */
+}
+.carousel-arrow-right {
+  right: 0px;
+  background-image: url('../img/right.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* 或者 'contain' */
+}
+.carousel-container:hover .carousel-arrow {
+  display: block;
+  cursor: pointer;
+}
+
+/*右侧栏*/
+#notice {
+  width: 308px;
+  height: 360px;
+  border: 1px solid #e4e4e4;
+  float: right;
+}
+
+h1 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f5f5f5;
+  padding-left: 10px;
+  position: relative;
+}
+
+#more, .notice, .tab {
+  color: black;
+}
+
+#more {
+  position: absolute;
+  right: 20px;
+}
+
+.notice {
+  padding-left: 10px;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+}
+
+.notice span {
+  font-weight: bold;
+}
+
+#status {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.notice:hover, #more:hover {
+  color: rgb(241, 68, 68);
+}
+
+#tabs {
+  margin-top: 15px;
+  width: 100%;
+  height: 176px;
+  overflow: hidden;
+  position: relative;
+}
+
+#tabs li {
+  float: left;  
+}
+
+.tab {
+  display: block;
+  width: 305px;
+  height: auto;
+  line-height: 30px;
+  background-color: #f5f5f5;
+  text-align: center;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;;
+}
+
+/* 下面的长图 */
+#showGoods {
+  width: 980px;
+  height: 150px;
+  overflow: hidden;
+}
+
+#showGoods li {
+  float: left;
+  position: relative;
+  border: 1px solid rgb(241, 68, 68);
+  border-right: 0px;
+}
+
+#showGoods ul {
+  width: 100000px;
+  height: 148px;
+  position: absolute;
+  left: 0px;
+}
+
+#showGoods li, #showGoods img {
+  width: 138.9px;
+  height: 148px;
+}
+
+/*底部*/
+#footer {
+  margin: 30px auto 10px auto;
+  width: 1192px;
+  height: 30px;
+  line-height: 30px;
+  /* text-align: center;
+  color: gray; */
+  border-top: 2px solid rgb(241, 68, 68);
+}
