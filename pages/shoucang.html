@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑猫收藏夹</title>
+    <link rel="icon" href="../img/home.ico" type="image/x-icon">
+    
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        a {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: #121414;
+            text-decoration: none;
+            margin: 40px;
+        }
+
+        a:hover {
+            color: #e485cf;
+            transform: scale(1.1);
+            transition: all 0.3s;
+        }
+    </style> <img src="../img/logo.png" alt=“logo”> <a href="../index.html">首页</a>
+    <style>
+    #nav {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(203, 15, 15);
+    }
+
+    #nav-list {
+        /*导航栏横向部分*/
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #nav-list li {
+        /* 修改字体 */
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 18px;
+    }
+
+    #nav-list li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #nav-list li a:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+
+    #grid {
+        /* 修改宽度 */
+        width: 100%;
+        /* 设置最大宽度 */
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .item {
+        width: 23%;
+        margin: 1%;
+        border: 1px solid #052020;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .item img {
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .item p {
+        /* 修改字体 */
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 16px;
+        /* 修改颜色 */
+        color: #011919;
+        margin: 10px;
+    }
+
+    #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer p {
+        /* 修改字体 */
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .search-box {
+        width: 500px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 80%;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+    }
+
+    .search-button {
+        width: 15%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: #f40;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <ul id="nav-list">
+            <li><a href="#">黑猫收藏夹</a></li>
+            <li><a href="#">宝贝收藏</a></li>
+            <li><a href="#">店铺收藏</a></li>
+        </ul>
+    </div>
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="请输入搜索内容">
+        <button class="search-button">搜索</button>
+    </div>
+    <div id="grid">
+        <!-- 商品项 -->
+        <div class="item">
+            <img src="..\img\1.jpg" alt="">
+            <p>【新品】超级无敌热水器</p>
+            <p>￥100999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\2.jpg" alt="">
+            <p>【新品】超级无敌大冰箱</p>
+            <p>￥99999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\3.jpg" alt="">
+            <p>【新品】无敌咖啡</p>
+            <p>￥10099999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\4.jpg" alt="">
+            <p>【新品】茅台</p>
+            <p>￥10099999999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\5.png" alt="">
+            <p>【新品】MUJI围巾</p>
+            <p>￥999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\6.png" alt="">
+            <p>【新品】ipad</p>
+            <p>￥9999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\7.png" alt="">
+            <p>【新品】iphone 15 pro</p>
+            <p>￥9999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\8.png" alt="">
+            <p>【新品】apple watch</p>
+            <p>￥6999</p>
+        </div>
+        <div class="item">
+            <img src="..\img\8.png" alt="">
+            <p>【新品】apple watch</p>
+            <p>￥6999</p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>© 2023 by Heimao. Proudly created wujunhao</p>
+    </div>
+</body>
+
+</html>

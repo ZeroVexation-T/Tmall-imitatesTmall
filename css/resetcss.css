@@ -1,0 +1,125 @@
+/*全局样式：重置各个浏览器默认的样式，使页面在不同浏览器中表现一致*/
+/*基于YUI重置CSS样式*/
+
+/* 设置整个文档的文本颜色为黑色，背景颜色为白色 */
+html {
+	color: #000;
+	background: #FFF;
+}
+
+/* 以下是对多个HTML元素的通用样式重置 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0; /* 清除外边距 */
+	padding: 0; /* 清除内边距 */
+}
+
+/* 重置表格样式 */
+table {
+	border-collapse: collapse; /* 合并表格边框 */
+	border-spacing: 0; /* 设置单元格间距为0 */
+}
+
+/* 清除字段集和图像的边框 */
+fieldset,
+img {
+	border: 0;
+}
+
+/* 重置特殊元素的字体样式 */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* 清除列表样式 */
+ol,
+ul {
+	list-style: none;
+}
+
+/* 左对齐标题和表格表头 */
+caption,
+th {
+	text-align: left;
+}
+
+/* 重置标题的字体大小和粗细 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* 清除引用前后的内容 */
+q:before,
+q:after {
+	content: '';
+}
+
+/* 清除缩写和首字母缩写的边框和字体变化 */
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal; /* 设置小型大写字母的字体显示文本 */
+}
+
+/* 调整上标和下标的垂直对齐 */
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+
+/* 重置表单元素的字体样式 */
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	* {
+		font-size: 100%;
+	}
+}
+
+/* 为图例（legend）设置文本颜色为黑色 */
+legend {
+	color: #000;
+}

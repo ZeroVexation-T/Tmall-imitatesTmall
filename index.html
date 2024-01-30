@@ -1,0 +1,206 @@
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="txq"/>
+  <meta name="keywords" content="shopping,web"/>
+  <meta name="copyright" content="txq"/>
+
+  <title>黑猫Hmall</title>
+  <link rel="icon" href="img/home.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/resetcss.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    .magnifiedImage {
+      position: absolute;
+      border: 1px solid #ddd;
+      display: none;
+      z-index: 100;
+    }
+  </style>
+</head>
+
+<body>
+<!---------------- header -------------------->
+<div id="header">
+  <ul id="leftList" class="list">
+      <li><a href="#" class="link">黑猫首页</a></li>
+      <li><a href="#" class="link">请登录</a></li>
+      <li><a href="#" class="link">免费注册</a></li>
+  </ul>
+  <ul id="rightList" class="list">
+    <li class="hasChild">
+      <a href="#" class="link" title="myOrders">我的订单</a>
+      <ul class="showDetail">
+        <li><a class="item" target="_blank" href="pages/orders.html">全部订单</a></li>
+        <li><a class="item" target="_blank" href="pages/Pendingorders.html">待付款订单</a></li>
+        <li><a class="item" target="_blank" href="pages/Orderstobereceived.html">待收货订单</a></li>
+        <li><a class="item" target="_blank" href="pages/Orderstobeevaluated.html">待评价订单</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="link">购物车</a></li>
+    <li class="hasChild">
+      <a href="pages/shoucang.html" class="link">收藏夹</a>
+      <ul class="showdetail">
+        <li><a href="#" class="item">收藏的宝贝</a></li>
+        <li><a href="#" class="item">收藏的店铺</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!--------------------- content ---------------------------->
+<div id="content">
+  <div></div>
+  <!--搜索框-->
+  <div id="search">
+      <input type="text" id="select" placeholder="搜索 黑猫 商品/品牌/店铺"/>
+      <button type="button" id="btnQuery">搜索</button>
+  </div>
+  <!--左侧导航菜单-->
+  <div id="catalog">
+      <h2 id="catalog-title">主题市场</h2>
+      <div class="catalog">
+        <ul>
+          <li>
+            <img src="img/small-logo-01.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">女装</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">内衣</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-02.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">男装</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">运动户外</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-03.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">女鞋</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">男鞋</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-04.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">美妆</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">个人护理</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-05.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">眼镜</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">珠宝饰品</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-06.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">手机</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">数码</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-07.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">母婴玩具</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-08.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">零食</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">茶酒</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-09.png"/>
+            <a href="#" class="linBbrand"><span class="small-logo">生鲜水果</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-10.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">大家电</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">生活电器</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-11.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">家具</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">灯具</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-12.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">汽车</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">配件</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-13.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">家纺</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">家饰</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-14.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">医药保健</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-15.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">厨具</span></a><span class="gang">/</span>
+            <a href="#" class="linkBrand"><span class="small-logo">收纳</span></a>
+          </li>
+          <li>
+            <img src="img/small-logo-16.png"/>
+            <a href="#" class="linkBrand"><span class="small-logo">图书音像</span></a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div id="menus">
+    <ul>
+      <li><a href="#" class="menu">黑猫超市</a></li>
+      <li><a href="#" class="menu">黑猫国际</a></li>
+      <li><a href="#" class="menu">医药馆</a></li>
+      <li><a href="#" class="menu">黑猫会员</a></li>
+      <li><a href="#" class="menu">飞猪旅行</a></li>
+    </ul>
+  </div>
+  <!--中间 轮播图-->
+  <div class="carousel-container">
+    <div class="carousel-list">
+      <img class="carousel-item item-1" src="img/carousel-01.jpg"/>
+      <img class="carousel-item item-2" src="img/carousel-02.jpg"/>
+      <img class="carousel-item item-3" src="img/carousel-03.jpg"/>
+      <img class="carousel-item item-4" src="img/carousel-04.jpg"/>
+    </div>
+    <div class="carousel-arrow carousel-arrow-left"></div>
+    <div class="carousel-arrow carousel-arrow-right"></div>
+    <div class="indicator">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!--右侧栏 -->
+  <div id="notice">
+    <div id="status">
+      <h1>公告<a href="pages/wangye.html" id="more">更多讯息</a></h1>
+      <ul>
+        <li><a href="#" class="notice"><span>[公告1]&nbsp;&nbsp;</span>双11限时抢购</a></li>
+        <li><a href="#" class="notice"><span>[公告2]&nbsp;&nbsp;</span>双12抢先购</a></li>
+        <li><a href="#" class="notice"><span>[公告3]&nbsp;&nbsp;</span>水果店盛大开业</a></li>
+        <li><a href="#" class="notice"><span>[公告4]&nbsp;&nbsp;</span>电器以旧换新</a></li>
+        <li><a href="#" class="notice"><span>[公告5]&nbsp;&nbsp;</span>品牌联合满减购</a></li>
+        <li><a href="#" class="notice"><span>[公告5]&nbsp;&nbsp;</span>年货抢先购</a></li>
+      </ul>
+    </div>
+    <div id="tabs">
+      <img class="tab" src="img/tabs-00.png">
+    </div>
+  </div>
+  <!-- 下方的长图 -->
+  <div id="showGoods">
+    <ul>
+      <li><a href="#" target="_blank"><img src="img/good1.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good2.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good3.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good4.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good5.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good6.jpg"></a></li>
+      <li><a href="#" target="_blank"><img src="img/good7.jpg"></a></li>
+    </ul>
+  </div>
+</div>
+<!-- footer -->
+<div id="footer">
+</div>
+
+<script src="js/home.js"></script>
+<script src="js/bottom.js"></script>
+</body>
+</html>
