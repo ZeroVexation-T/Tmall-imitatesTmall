@@ -116,7 +116,7 @@ a {
 }
 
 /*细节样式：每部分表现各自的样式*/
-#catalog, #menus, #carousel-container, #notice, #showGoods {
+#catalog, #menus, #notice, #showGoods {
   margin: 15px 10px 0 0;
   overflow: hidden;
   float: left;
